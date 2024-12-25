@@ -1,0 +1,33 @@
+Learn Redux:
+  > What is redux
+    - Redux is a State Management tool or System. 
+    - It work as a central state manager in the whole application.
+    - It can be use any JavaScript library or framework. Like- React, Vue, Angular or you can use it in Jqurey.
+    
+  > Principles of redux
+    - Single Source of truth.
+    - State is read only.
+    - Changes are made with pure functions.
+
+  > Pillars of redux
+    - Store
+    - Action
+    - Reducers
+
+  > Generate Automatically React-Redux App
+  
+  > Manually Create React-Redux App
+    - Create Vite/React app -> npm create vite@latest
+    - install react-redux -> npm install react-redux
+    - install redux/redux-toolkit -> npm install @reduxjs/toolkit
+
+  > Counter App with Manually React-Redux App
+    - Create vite/react app
+    - install all dependencies -> react-redux, redux/toolkit or other
+    - Structure the file & folder
+    - Create Counter App interface or UI
+    - Configure React-Redux Store
+    - Wrap the whole application with redux "<Provider/>" Component
+    - Create counter slice and Reducers
+    - Connect counter slice to store Reducer
+    - Adding feature using useDispatch.
