@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import {
   decrement,
@@ -18,9 +19,16 @@ const Counter = () => {
   const endValueRef = useRef();
 
   const handleCount = () => {
-    console.log("i am calling");
-    dispatch(setStartValue(parseInt(startValueRef.current.value)));
-    dispatch(setEndValue(parseInt(endValueRef.current.value)));
+    if (
+      startValueRef.current.value === "" ||
+      endValueRef.current.value === ""
+    ) {
+      toast.error("Please enter start and end values");
+      return;
+    } else {
+      dispatch(setStartValue(parseInt(startValueRef.current.value)));
+      dispatch(setEndValue(parseInt(endValueRef.current.value)));
+    }
   };
 
   const handleReset = () => {
